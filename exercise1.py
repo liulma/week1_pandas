@@ -33,8 +33,21 @@ print(grouped_df)
 # Exercise 1.5: Introduce some missing values in 'Score' and fill missing values
 df.replace({'Score': {8.0: None , 9.0: None}}, inplace=True)
 
-print(df)
-
-df_filled = df.fillna({'Score': df['Score'].mean()})
+df_filled = df.fillna({'Score': df['Score'].mean().round(2)})
 
 print(df_filled)
+
+# Exercise 1.6: Create another DataFrame and concatete it with the previous one
+data2 = {
+    'Name': ['Michael', 'James', 'Jenny', 'Matthew', 'Alisa'],
+    'Age': [22, 50, 41, 31, 31],
+    'Occupation': ['Software Engineer', 'Cashier', 'Data Engineer', 'Construction worker', 'System specialist']
+}
+
+df2 = pd.DataFrame(data2)
+
+print(df2)
+
+concatenated_df = pd.concat([df, df2], ignore_index=True)
+
+print(concatenated_df)
