@@ -29,3 +29,12 @@ grouped_df = df.groupby('Age').mean('Score')
 
 print("Grouped by age, mean of scores:")
 print(grouped_df)
+
+# Exercise 1.5: Introduce some missing values in 'Score' and fill missing values
+df.replace({'Score': {8.0: None , 9.0: None}}, inplace=True)
+
+print(df)
+
+df_filled = df.fillna({'Score': df['Score'].mean()})
+
+print(df_filled)
