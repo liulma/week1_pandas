@@ -29,13 +29,16 @@ grouped_df = df.groupby('Age').mean('Score')
 
 print("Grouped by age, mean of scores:")
 print(grouped_df)
+print()
 
 # Exercise 1.5: Introduce some missing values in 'Score' and fill missing values
 df.replace({'Score': {8.0: None , 9.0: None}}, inplace=True)
 
 df_filled = df.fillna({'Score': df['Score'].mean().round(2)})
 
+print("None -values filled with the mean score:")
 print(df_filled)
+print()
 
 # Exercise 1.6: Create another DataFrame and concatete it with the previous one
 data2 = {
@@ -46,8 +49,11 @@ data2 = {
 
 df2 = pd.DataFrame(data2)
 
+print("New dataframe:")
 print(df2)
+print()
 
 concatenated_df = pd.concat([df, df2], ignore_index=True)
 
+print("Concatenated dataframe:")
 print(concatenated_df)
