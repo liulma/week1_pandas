@@ -1,6 +1,6 @@
-# Exercise 1.2: Set the 'Name' column as the index and slice the DataFrame to display information about individuals over the age of 25
 import pandas as pd
 
+# Exercise 1.2: Set the 'Name' column as the index and slice the DataFrame to display information about individuals over the age of 25
 data = {
     'Name': ['Teresa', 'Maria', 'John', 'Peter', 'Tom'],
     'Age': [30, 48, 30, 33, 24],
