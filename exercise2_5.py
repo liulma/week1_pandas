@@ -1,6 +1,6 @@
 import pandas as pd
 
-# Exercise 2.5: New dataset which displays the average fare per sex and Pclass
+# Exercise 2.5: New dataset which displays the average fare per sex and also Pclass
 file_path = 'titanic.csv'
 
 df = pd.read_csv(file_path)
