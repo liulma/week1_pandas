@@ -1,6 +1,6 @@
 import pandas as pd
 
-# Exercise 2.6: New dataset which displays the average fare per survived
+# Exercise 2.6: New dataset with the average fare per survived
 file_path = 'titanic.csv'
 
 df = pd.read_csv(file_path)
